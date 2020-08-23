@@ -61,6 +61,17 @@ title %}Log in!{% endblock %} {% block body %}
                 </div>
               </div>
             </form>
+            <a
+  href="{{ path('hwi_oauth_service_redirect', {'service': 'auth0'}) }}"
+  style="color: #fff;"
+>
+  <div class="card mb-3" style="background-color: #e8542e">
+    <div class="card-body" style="padding: 0;">
+      <img src="https://i.imgur.com/02VeCz0.png" height="40" />
+      Connect with Auth0
+    </div>
+  </div>
+</a>
           </div>
         </div>
       </div>
