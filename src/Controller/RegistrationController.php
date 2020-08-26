@@ -105,6 +105,7 @@ class RegistrationController extends AbstractController
 
         // On supprime le token
         $user->setActivationToken(null);
+        $user->setStat("actif");
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->persist($user);
         $entityManager->flush();

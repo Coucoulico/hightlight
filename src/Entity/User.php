@@ -49,6 +49,11 @@ class User implements UserInterface
      */
     private $reset_token;
 
+    /**
+     * @ORM\Column(type="string", length=30, nullable=true)
+     */
+    private $stat;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -158,6 +163,18 @@ class User implements UserInterface
     public function setResetToken(?string $reset_token): self
     {
         $this->reset_token = $reset_token;
+
+        return $this;
+    }
+
+    public function getStat(): ?string
+    {
+        return $this->stat;
+    }
+
+    public function setStat(?string $stat): self
+    {
+        $this->stat = $stat;
 
         return $this;
     }
