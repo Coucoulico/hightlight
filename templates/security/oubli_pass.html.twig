@@ -1,0 +1,28 @@
+{# templates/security/oubli_pass.html.twig #} {% extends 'base.html.twig' %}
+
+{% block title %}Oubli pass!{% endblock %} 
+	{% block body %}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 ml-md-auto">
+					<div class="card bg-light mb-3 mt-5" style="width: 800px">
+						<div class="card-body">
+							<div class="card-header mb-3">Recuperer mot de passe</div>
+							{{ form_start(emailForm,{'attr': {'id': 'recuperation'}}) }}
+							<div class="form_group">
+								<div class="col-md-12 mb-3">
+									{{ form_row(emailForm.email, {'attr': {'class': 'form-control'}}) }}
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-md-8 col-md-offset-4" style="margin-top:5px;">
+									{{ form_row(emailForm.envoyer, {'attr': {'class': 'btn btn-primary'}}) }}
+								</div>
+							</div>
+							{{ form_end(emailForm) }}		
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endblock %}

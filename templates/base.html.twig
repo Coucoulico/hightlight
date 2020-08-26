@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
       <ul class="nav navbar-nav navbar-right">
         {% if app.user %}
-        <li><a class="nav-link" href="{{ path('compte') }}">View List</a></li>
+        <li><a class="nav-link" href="{{ path('compte') }}">accueil</a></li>
         <li><a class="nav-link" href="{{ path('app_logout') }}">Logout</a></li>
         {% else %}
         <li><a class="nav-link" href="{{ path('app_login') }}">Login</a></li>
@@ -29,6 +29,12 @@
         {% endif %}
       </ul>
     </nav>
-    {% block body %}{% endblock %} {% block javascripts %}{% endblock %}
+    {% block body %}{% endblock %} 
+      {% block javascripts %}
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+      {% endblock %}
   </body>
 </html>
